@@ -1,0 +1,241 @@
+body
+    margin: 0
+    box-sizing: border-box
+    min-width: 100%
+    // min-height: 100vh
+    background-color: hsl(185, 41%, 84%)
+    font-family: "Space Mono", sans-serif
+.attribution
+    position: absolute
+    bottom: 5px
+    left: 50%
+    transform: translateX(-50%)
+    display: none
+p
+    margin-bottom: 5px
+    font-weight: bold
+.activeTip
+    background-color: hsl(172, 67%, 45%) !important
+    color: hsl(183, 100%, 15%) !important
+
+.logoDiv
+    width: 100%
+    min-height: 154px
+    .logo
+        display: block
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        margin-top: 50px
+        margin-bottom: 50px
+.container
+    width: 100%
+    height: 100vh
+    // height: 90vh
+    min-height: 477px
+    background-color: white
+    border-radius: 20px
+    position: relative
+    //flexbox
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    //end flexbox
+    .left
+        // background-color: blue
+        width: 80%
+        height: 50%
+        // position: absolute
+        // top: 20px
+        //flexbox
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        //end flexbox
+        font-size: 15px
+        color: grey
+        div
+            width: 100%
+        input
+            background-color: #EFEFEF
+            border: 0
+            width: calc(100% - 20px)
+            padding: 10px
+            text-align: right
+            font-size: 26px !important
+            font-weight: bold
+            color: hsl(183, 100%, 15%)
+            &.dollar
+                background-image: url('../images/icon-dollar.svg')
+                background-size: 13px
+                background-repeat: no-repeat
+                background-position: 10px center
+            &.person
+                background-image: url('../images/icon-person.svg')
+                background-size: 13px
+                background-repeat: no-repeat
+                background-position: 10px center
+
+        .tips
+            position: relative
+            .selectTip
+                width: 100%
+                height: 200px
+                //flexbox
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-between
+                // end flexbox
+                div
+                    width: calc(40%)
+                    height: 15%
+                    background-color: hsl(183, 100%, 15%)
+                    border-radius: 5px
+                    font-family: 'Space Mono'
+                    color: white
+                    font-weight: bold
+                    font-size: 20px
+                    // flexbox
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    cursor: pointer
+                    padding: 10px
+                .custom
+                    background-color: #EFEFEF
+                    color: grey
+                    width: calc(40%)
+                    height: 15%
+                    border-radius: 5px
+                    font-family: 'Space Mono'
+                    font-weight: bold
+                    font-size: 20px
+                    // flexbox
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    cursor: pointer
+                    padding: 10px
+    .right
+        width: 90%
+        height: 30%
+        // min-height: 250px
+        margin-top: 30px
+        margin-bottom: 30px
+        background-color: hsl(183, 100%, 15%)
+        border-radius: 10px
+        // margin-top: 5px
+        //flexbox
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        //end flexbox
+        div
+            // background-color: red
+            width: 90%
+            height: 30%
+            position: relative
+            margin: 0
+            .txt
+                display: block
+                margin: 0
+                position: absolute !important
+                // background-color: blue
+                top: 50%
+                left: 5px
+                transform: translateY(-50%)
+                font-size: 16px
+                font-weight: bold
+                color: white
+                span
+                    font-size: 0.8em
+                    margin: 0
+                    color: grey
+            .tipAmount
+                display: block
+                position: absolute
+                top: 50%
+                right: 5px
+                transform: translateY(-50%)
+                color: hsl(172, 67%, 45%)
+                font-size: 26px
+                font-weight: bold
+            .tipTotal
+                display: block
+                position: absolute
+                top: 50%
+                right: 5px
+                transform: translateY(-50%)
+                color: hsl(172, 67%, 45%)
+                font-size: 26px
+                font-weight: bold
+        button
+            width: 90%
+            height: 20%
+            background-color: hsl(172, 67%, 45%)
+            color: hsl(183, 100%, 15%)
+            font-weight: bold
+            text-transform: uppercase
+            font-size: 16px
+            border: 0
+            cursor: pointer
+            // display: none
+    // .test
+    //     width: 80%
+    //     height: 30%
+    //     background-color: black      
+
+@media only screen and (min-width: 1000px)
+    .container
+        height: 90vh
+        max-width: 1000px
+        max-height: 500px !important
+        // height: 200vh !important
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        flex-direction: row !important
+        flex-wrap: nowrap
+        .left
+            width: 45%
+            height: 80%
+            overflow: hidden
+            input
+                padding: 10px
+                width: calc(100% - 20px)
+            .tips
+                .selectTip
+                    height: 150px
+                    div
+                        width: 25%
+                        height: 20%
+                    .custom
+                        width: 25%
+                        height: 20%
+        .right
+            width: 40%
+            height: 80%
+            min-height: 400px !important
+            justify-content: flex-start
+            position: relative
+            div
+                height: 20%
+            button
+                // justify-items: flex-end
+                height: 15%
+                position: absolute
+                bottom: 30px
+    .logoDiv
+        position: relative
+        margin-top: 20px
+        min-height: 200px
+        .logo
+@media only screen and (max-height: 641px)
+    .container
+        height: 120vh !important
